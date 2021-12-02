@@ -20,3 +20,16 @@ email.addEventListener('input',function(){
     }
 });
 
+//UC3:Phone Validation.
+const number = document.querySelector("#number");
+const numbererror = document.querySelector('.number-error')
+email.addEventListener('input', function () {
+    let regex = RegExp('^[0-9]{2}[ ][0-9]{10}$');
+    if (regex.test(number.value))
+        numbererror.textContent = "";
+    else
+        numbererror.textContent = "Wrong number input";
+
+});
+
+
