@@ -8,3 +8,15 @@ text.addEventListener('input',function(){
     else textError.textContent = "Name is incorrect";
 });
 
+//UC 2 Email validation.
+const email = document.querySelector('#emailInput');
+const emailError = document.querySelector('.email-error');
+email.addEventListener('input',function(){
+    let emailRegex = RegExp('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$');
+    if(emailRegex.test(email.value)){
+        emailError.textContent="";
+    }else{
+        emailError.textContent="Email is InValid";
+    }
+});
+
